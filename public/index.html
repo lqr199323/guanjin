@@ -14,6 +14,7 @@
             box-sizing:border-box;
             background-color:rgba(17,34,46,0.3);
             position: fixed;
+            z-index: 100;
             display:flex;
             flex-wrap:wrap;
             justify-content: space-between;
@@ -81,7 +82,7 @@
             font-size:24px;
             text-align:center;   
             margin: 40px 40%;   
-            margin-bottom:120px;
+            margin-bottom:80px;
         }
         .ul{margin-left:20%}
         .ul li{
@@ -147,28 +148,43 @@
             margin-top:120px;
             color:white;
             }
-        .person ul{
-            width: 80%;float:left;height:156px;
+        .team ul{
+            width: 80%;height:190px;float:left;
             margin:0 10%;
+            margin-left: 13%;
+            /* border: solid; */
             list-style: none;
             display: flex;
-            justify-content: space-around;
             flex-wrap:wrap;
             overflow: hidden;
             
         }
-        .person li{
+        .team li{
             width:20%;
-            
         }
-        .img{
-            width: 50%;
+        .person{
+            width: 60%;display: flex;
+            /* justify-content: center; */
+            flex-wrap:wrap;
+            position: relative;
+            margin-top: 10px;
+            display: inline-block;
         }
-        .img img{
-            width:80%;
+        .img{width:100%;
             border-radius:100%;
-
+            }
+        .img img{
+            width:100%;
+            border-radius:100%;
         } 
+        .link{display: none} 
+        .person:hover .link{display: block;float: left;width: 100%;height:100%;border-radius:100%;position:absolute;background:#bb00009e;padding:35%;box-sizing: border-box;}
+        .bottom{
+            float: left;width: 100%;
+            line-height: 30px;color: #fff;
+            text-align: center;font-size: 15px;
+            margin: 100px auto;
+            }
     </style>
 </head>
 <body>
@@ -253,37 +269,54 @@
     <div id="contenter2">
             <p class="big_title">INVESTMENT TEAM</p>
             <p class="small_title">投资团队</p>
-            <div class="person">
+            <div class="team">
                  <ul>
                     <li>
-                        <a class="img" href=""><img src="./image/person/1.jpg"></a>
-                        <a class="info" href=""></a>
+                        <a class="person" href="">
+                            <div class="link"><img src="./image/link.png"/></div>
+                            <div class="img"><img src="./image/person/1.jpg"/></div>
+                        </a>
                     </li> 
                     <li>
-                        <a class="img" href=""><img src="./image/person/2.jpg"></a>
-                        <a class="info" href=""></a>
+                        <a class="person" href="">
+                            <div class="link"><img src="./image/link.png"/></div>
+                            <div class="img"><img src="./image/person/2.jpg"/></div>
+                        </a>
                     </li>
                     <li>
-                        <a class="img" href=""><img src="./image/person/3.jpg"></a>
-                        <a class="info" href=""></a>
+                        <a class="person" href="">
+                            <div class="link"><img src="./image/link.png"/></div>
+                            <div class="img"><img src="./image/person/3.jpg"/></div>
+                        </a>
                     </li> 
                     <li>
-                        <a class="img" href=""><img src="./image/person/4.jpg"></a>
-                        <a class="info" href=""></a>
+                        <a class="person" href="">
+                            <div class="link"><img src="./image/link.png"/></div>
+                            <div class="img"><img src="./image/person/4.jpg"/></div>
+                        </a>
                     </li>
                     <li>
-                        <a class="img" href=""><img src="./image/person/5.jpg"></a>
-                        <a class="info" href=""></a>
+                        <a class="person" href="">
+                            <div class="link"><img src="./image/link.png"/></div>
+                            <div class="img"><img src="./image/person/5.jpg"/></div>
+                        </a>
                     </li> 
                     <li>
-                        <a class="img" href=""><img src="./image/person/6.jpg"></a>
-                        <a class="info" href=""></a>
+                        <a class="person" href="">
+                            <div class="link"><img src="./image/link.png"/></div>
+                            <div class="img"><img src="./image/person/6.jpg"/></div>
+                        </a>
                     </li>    
                     <li>
-                        <a class="img" href=""><img src="./image/person/7.jpg"></a>
-                        <a class="info" href=""></a>
+                        <a class="person" href="">
+                            <div class="link"><img src="./image/link.png"/></div>
+                            <div class="img"><img src="./image/person/7.jpg"/></div>
+                        </a>
                     </li>    
                 </ul> 
+            </div>
+            <div class="bottom">
+                专业的金融投资管理团队，为您提供卓越的金融服务
             </div>
     </div>
     
