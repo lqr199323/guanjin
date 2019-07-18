@@ -31,14 +31,15 @@
             width:100%;
             height:50px;
             margin:30px 0;
+            transition:1s;
             }
+        .d1>a:active .d1{border-bottom:5px solid #b00}
         .d1:hover{border-bottom:5px solid #fa0}
         #header_box li a{
             font-size:bold 15px;
             color: white;
             }
-            #now{border-bottom:5px solid #b00}
-        .d1>a:active{border-bottom:5px solid #b00}
+        
         #apply{
             float:left;
             width:6%;height:30px;
@@ -46,11 +47,11 @@
             border-radius:35px;
             margin:2.6% 3.4%;
             padding:0 1.4%;
-            
             color:white;
             font-size:13px;
             line-height:30px;
             text-align:center;
+            transition:.3s
             }
         #apply:hover{
             border-radius: 5px;
@@ -59,10 +60,10 @@
         }
         /* 轮播图 */
         #full_pic{
-            width:100%;height:480px;
+            width:100%;
             float:left;
-            overflow: hidden;
         }
+        #full_pic img{width:100%;}
         /* 内容板块 */
         #contenter1{width:100%;float:left;margin-top:120px;}
         .big_title{
@@ -84,11 +85,11 @@
             margin: 40px 40%;   
             margin-bottom:80px;
         }
-        .ul{margin-left:20%}
+        .box .ul{float:left;width:100%;display:flex;justify-content: space-around;flex-wrap:wrap;} 
         .ul li{
             float: left;
             width: 15%;
-            margin-right:5%;
+            /* margin-right:5%; */
             position: relative;
             padding: 60px;
             background: #eee;
@@ -102,6 +103,7 @@
             color: #333;
             overflow: hidden;
             font-size: 18px;
+            transition:.3s;
         }
         .title2{
             font-size:28px;
@@ -112,6 +114,7 @@
             height: 3px;
             background: #333;
             margin: 20px 0;
+            transition:.3s;
         }
         .ul p{
             float: left;
@@ -130,6 +133,7 @@
             margin-top: 20px;
             border: 1px solid #bbb;
             padding: 0 30px;
+            transition:.3s;
         }
         .ul li:hover{
             background: #b00;
@@ -149,7 +153,7 @@
             color:white;
             }
         .team ul{
-            width: 80%;height:190px;float:left;
+            width: 80%;float:left;
             margin:0 10%;
             margin-left: 13%;
             /* border: solid; */
@@ -177,14 +181,19 @@
             width:100%;
             border-radius:100%;
         } 
-        .link{display: none} 
-        .person:hover .link{display: block;float: left;width: 100%;height:100%;border-radius:100%;position:absolute;background:#bb00009e;padding:35%;box-sizing: border-box;}
-        .bottom{
+      .link{display: none;transition:1s;} 
+      .person:hover .link{display: block;float: left;width: 100%;height:98%;border-radius:100%;background:#bb00009e;padding:30%;position:absolute;box-sizing: border-box;}
+       .bottom{
             float: left;width: 100%;
             line-height: 30px;color: #fff;
             text-align: center;font-size: 15px;
             margin: 100px auto;
             }
+    #news{float:left;padding:100px 0;width:50%; border:solid;}
+    .news{float:left;margin:10px 0;width:90%;}
+    .news>*{display:block;margin-bottom:10px}
+    .news .a1{font-size:18px;line-height:32px;color:#999}
+    .news p{line-height: 24px;font-size: 13px;color: #999;}
     </style>
 </head>
 <body>
@@ -194,7 +203,7 @@
           </a> 
            <ul>
                <li>
-                   <div class="d1" id="now">
+                   <div class="d1">
                         <a href="#" >
                             首页
                         </a>
@@ -240,31 +249,34 @@
         <table></table>
         <p class="big_title">PORTFOLIO</p>
         <p class="small_title">业务板块</p>
-        <div id="detail">
-            <ul class="ul">
-                <li>
-                    <a href="" class="title1">Fund Investment</a>
-                    <a href="" class="title2">基金业务</a>
-                    <i></i>
-                    <p>专注于各细分市场龙头，行业“隐形冠军" 企业的股权投资，帮助企业成长，实现资本增值</p>
-                    <a href="" class="see">查看详情&nbsp;+</a>
-                </li>
-                <li>
-                    <a href="" class="title1">Direct Investment</a>
-                    <a href="" class="title2">金融直投</a>
-                    <i></i>
-                    <p>根据集团公司产业发展需要，以股权直投的方式扩展高端制造行业相关产业链，以资本力量助力集团发展，实现集团公司的高速成长</p>
-                    <a href="" class="see">查看详情&nbsp;+</a>
-                </li>
-                <li>
-                    <a href="" class="title1">Consultant</a>
-                    <a href="" class="title2">咨询顾问</a>
-                    <i></i>
-                    <p>为中小微企业服务，根据被服务企业自身的战略规划提供专业化的股权融资，债权融资，市值管理，资本运作，并购重组等咨询顾问工作</p>
-                    <a href="" class="see">查看详情&nbsp;+</a>
-                </li>      
-            </ul>
-        </div>
+        <div class="box">
+
+            <div id="detail">
+                <ul class="ul">
+                    <li>
+                        <a href="" class="title1">Fund Investment</a>
+                        <a href="" class="title2">基金业务</a>
+                        <i></i>
+                        <p>专注于各细分市场龙头，行业“隐形冠军" 企业的股权投资，帮助企业成长，实现资本增值</p>
+                        <a href="" class="see">查看详情&nbsp;+</a>
+                    </li>
+                    <li>
+                        <a href="" class="title1">Direct Investment</a>
+                        <a href="" class="title2">金融直投</a>
+                        <i></i>
+                        <p>根据集团公司产业发展需要，以股权直投的方式扩展高端制造行业相关产业链，以资本力量助力集团发展，实现集团公司的高速成长</p>
+                        <a href="" class="see">查看详情&nbsp;+</a>
+                    </li>
+                    <li>
+                        <a href="" class="title1">Consultant</a>
+                        <a href="" class="title2">咨询顾问</a>
+                        <i></i>
+                        <p>为中小微企业服务，根据被服务企业自身的战略规划提供专业化的股权融资，债权融资，市值管理，资本运作，并购重组等咨询顾问工作</p>
+                        <a href="" class="see">查看详情&nbsp;+</a>
+                    </li>      
+                </ul>
+            </div>
+        </div> 
     </div>
     <div id="contenter2">
             <p class="big_title">INVESTMENT TEAM</p>
@@ -318,6 +330,24 @@
             <div class="bottom">
                 专业的金融投资管理团队，为您提供卓越的金融服务
             </div>
+    </div>
+    <div class="box">
+        <table></table>
+        <div id="news">
+            <div class="news">
+                <h4>/&nbsp;2018-09-29</h4>
+                <a class="a1" href="#">“观今专项冠军私募股权投资基金1期”已成功备案发行</a>
+                <p>观今投资已于2018年9月21日成功备案发行“观今专项冠军私募股权投资基金”</p>
+            </div>
+            <div class="news">
+                <h4>/&nbsp;2018-04-19</h4>
+                <a class="a1" href="#">全国股转公司（新三板）发布新版《全国中小企业股份转让系统挂牌公司分层管理办法</a>
+                <p>全国股转公司官网2017年12月22日发布新版《全国中小企业股份转让系统挂牌公司分层管理办法》</p>
+            </div>
+        </div>
+        <div id="pic">
+
+        </div>
     </div>
     
 </body>
