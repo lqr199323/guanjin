@@ -1,0 +1,212 @@
+ /* css reset */
+ *{margin:0px;padding:0px;text-decoration:none;}
+ /* 导航栏 */
+ #header_box{
+     width:100%;height:110px;
+     float:left;
+     padding:0 8%;
+     box-sizing:border-box;
+     background-color:rgba(17,34,46,0.3);
+     position: fixed;
+     z-index: 100;
+     display:flex;
+     flex-wrap:wrap;
+     justify-content: space-between;
+     } 
+ #header_box ul{width:60%;display:flex;justify-content: space-between} 
+ #header_box li{
+     width:10%;height:110px;
+     list-style: none;
+     float:left; 
+     line-height:50px;
+     text-align: center
+     }
+ .d1{
+     width:100%;
+     height:50px;
+     margin:30px 0;
+     transition:.3s;
+     }
+ .d1>a:active .d1{border-bottom:5px solid #b00}
+ .d1:hover{border-bottom:5px solid #fa0}
+ #header_box li a{
+     font-size:bold 15px;
+     color: white;
+     }
+ 
+ #apply{
+     float:left;
+     width:6%;height:30px;
+     border:1px solid white;
+     border-radius:35px;
+     margin:2.6% 3.4%;
+     padding:0 1.4%;
+     color:white;
+     font-size:13px;
+     line-height:30px;
+     text-align:center;
+     transition:.3s
+     }
+ #apply:hover{
+     border-radius: 5px;
+     background: #fff;
+     color: #d80d18;
+ }
+ /* 轮播图 */
+ #full_pic{
+     width:100%;
+     float:left;
+ }
+ .carousel-control-next,.carousel-control-prev{
+      width:4%;height:20%;
+      background:rgba(0,0,0,0.3);
+      border-radius: .5rem;
+      top:40%;
+  }
+   /* .carousel-indicators li{
+      width:.5rem;height: 0.5rem;
+      background:white;
+      margin:0 0.4rem;
+      border-radius:50%;
+  } */
+  .carousel-indicators active{
+      background:#0aa1ed;
+  }
+ /* 内容板块 */
+ #contenter1{width:100%;float:left;margin-top:120px;}
+ .big_title{
+     float:left;
+     width:20%;height:140px;
+     background:#b00;
+     color:white;
+     font-size:24px;
+     text-align:center;
+     line-height:140px;      
+     margin: 0 40%;
+     margin-bottom:0;
+ }
+ .small_title{
+     float: left;
+     width:20%;
+     font-size:24px;
+     text-align:center;   
+     margin: 40px 40%;   
+     margin-bottom:80px;
+ }
+ .box .ul{float:left;width:100%;display:flex;justify-content: space-around;flex-wrap:wrap;} 
+ .ul li{
+     float: left;
+     width: 25%;
+     /* margin-right:5%; */
+     position: relative;
+     padding: 60px;
+     background: #eee;
+     list-style: none;
+     font-size: 18px;
+ }
+ .title1,.title2{
+     float: left;
+     width: 100%;
+     line-height: 44px;
+     color: #333;
+     overflow: hidden;
+     font-size: 18px;
+     transition:.3s;
+ }
+ .title2{
+     font-size:28px;
+ }
+ .ul i{
+     float: left;
+     width: 15%;
+     height: 3px;
+     background: #333;
+     margin: 20px 0;
+     transition:.3s;
+ }
+ .ul p{
+     float: left;
+     width: 100%;
+     line-height: 24px;
+     height: 150px;
+     font-size:13px;
+     overflow: hidden;
+ }
+ .see{
+     float: left;
+     line-height: 44px;
+     color: #666;
+     overflow: hidden;
+     font-size: 14px;
+     margin-top: 20px;
+     border: 1px solid #bbb;
+     padding: 0 30px;
+     transition:.3s;
+ }
+ .ul li:hover{
+     background: #b00;
+     border-radius: 20px 0 20px 0;
+     color:white;
+ }
+ .ul li:hover .title1 {color:white;}
+ .ul li:hover .title2 {color:white;}
+ .ul li:hover .see {color:white;border:1px solid white}
+ .ul li:hover i {background: white;width: 60%;}
+ #contenter2{
+     width:100%;
+     float:left;
+     background: url("../image/team.jpg") no-repeat center top;
+     background-attachment: fixed;
+     margin-top:120px;
+     color:white;
+     
+     }
+ .team_ul{
+     width: 80%;/*float:left*/;
+     margin:0 10%;
+     margin-left: 13%;
+     /* border: solid; */
+     list-style: none;
+     /* padding-bottom:50px; */
+     display: flex;
+     flex-wrap:wrap;
+     overflow: hidden;
+     
+ }
+ .team_ul li{
+     width:20%;
+ }
+ .person{
+     width: 60%;display: flex;
+     /* justify-content: center; */
+     flex-wrap:wrap;
+     position: relative;
+     margin-top: 10px;
+     display: inline-block;
+ }
+ .img{width:100%;
+     border-radius:100%;
+     }
+ .img img{
+     width:100%;
+     border-radius:100%;
+ } 
+.link{display: none;transition:1s;} 
+.person:hover .link{display: block;float: left;width: 100%;height:98%;border-radius:100%;background:#bb00009e;padding:30%;position:absolute;box-sizing: border-box;}
+.bottom{
+     float: left;width: 100%;
+     line-height: 30px;color: #fff;
+     text-align: center;font-size: 15px;
+     margin: 100px auto;
+     }
+.box2{width:100%;display:flex;justify-content: space-around;float:left}
+#news{float:left;padding:100px 0;width:50%;}
+.news{float:left;width:80%; transition:1s}
+.news>*{display:block;margin-bottom:10px}
+.news .a1{font-size:18px;line-height:32px;color:rgb(9, 9, 9)}
+.news:hover .a1{color:red;text-indent: 20px;}
+.news p{line-height: 24px;font-size: 13px;color: #999;}
+#pic{width:40%;padding:50px 0;}
+#footer{width:100%;background:url(../image/footer.jpg);padding-top:100px;color:white;line-height:30px;}
+#footer a{color:white}
+#map img{margin-top:-50px}

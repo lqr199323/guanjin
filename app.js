@@ -3,13 +3,13 @@ const express=require("express");
 //导入中间件
 const bodyParser = require('body-parser');
 //导入用户路由
-const userRouter=requier("./routers/user.js");
+const userRouter=require("./routers/user.js");
 //创建服务器
 var app=express();
 //绑定监听;
 app.listen("8080");
 //把资源静态托管到public
-app.use(express.status("public"));
+app.use(express.static("public"));
 //使用中间件
 app.use(bodyParser.urlencoded({ 
     extended: false

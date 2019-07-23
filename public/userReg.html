@@ -9,6 +9,7 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/userReg.js"></script>
     <style>
          
         #header_box{
@@ -26,11 +27,16 @@
             }
         #body{
             width:100%;height:640px;
-            background:url("../public/image/lb2.jpg") no-repeat;
+            background:url(./image/lb2.jpg) no-repeat;
             background-size: 100%
         }
-        .box{width:50%;background:rgba(17,34,46,0.5)}
+        .box{width:32%;background:rgba(17, 34, 46, 0.5)}
         .my_t{line-height:33px;}
+        .box span{font-size: 12px;margin-left:10px;}
+        .box2{width:100%;display:flex;justify-content: space-around;float:left}
+        #footer{width:100%;background:url(./image/footer.jpg);padding:50px 0;color:white;line-height:30px;opacity:}
+        #footer a{color:white}
+        /* #map img{margin-top:-50px} */
     </style>
 </head>
 <body>
@@ -41,7 +47,7 @@
         <span>欢迎注册</span>
     </div>
     <div id="body">
-        <div class=" row px-2 py-4 box float-right">
+        <div class=" row px-2 py-4 box float-right mr-5 mt-5">
             <div class="col-6 mb-4">
                 <h5 class="text-light">新用户注册</h5>
             </div>
@@ -49,45 +55,69 @@
                 <a class="text-light float-right" herf="http://127.0.0.1:8080/userLogin.html">直接登录</a>
             </div>
             <div class="col-3"></div>
-            <div class="col-3 text-light text-right my_t mb-2">用户名:</div>
-            <div class="col-6 mb-4">
-                <input class="form-control col-form-label-sm" type="text" id="uname" placeholder="请输入用户名">
+            <div class="col-3 text-light text-right my_t mb-2 ">用户名:</div>
+            <div class="col-5 mb-4 px-0">
+                <input class="form-control col-form-label-sm" type="text" id="uname" placeholder="请输入用户名" onblur="check_name()" onfocus="show_msg1()">
             </div>
-            <div class="col-3 mb-4">
-                <span id="msg1"></span>
+            <div class="col-4 mb-4 px-0">
+                <span id="msg1" class="alert-danger"></span>
             </div>
             <div class="col-3 text-light text-right my_t mb-2">登录密码:</div>
-            <div class="col-6 mb-4">
-                <input class="form-control col-form-label-sm" type="password" id="upwd" placeholder="请输入密码">
+            <div class="col-5 mb-4 px-0">
+                <input class="form-control col-form-label-sm" type="password" id="upwd" onblur="check_upwd()" onfocus="show_msg2()" placeholder="请输入密码">
             </div>
-            <div class="col-3 mb-4">
-                <span id="msg2"></span>
+            <div class="col-4 mb-4 px-0">
+                <span id="msg2" class="alert-danger"></span>
             </div>
             <div class="col-3 text-light text-right my_t mb-2">确认密码:</div>
-            <div class="col-6 mb-4">
-                <input class="form-control col-form-label-sm" type="password" id="upwd" placeholder="请确认密码">
+            <div class="col-5 mb-4 px-0">
+                <input class="form-control col-form-label-sm" type="password" id="cpwd" onblur="checkupwd()" onfocus="show_msg3" placeholder="请确认密码">
             </div>
-            <div class="col-3 mb-4">
-                <span id="msg3"></span>
+            <div class="col-4 mb-4 px-0">
+                <span id="msg3" class="alert-danger"></span>
             </div>
             <div class="col-3 text-light text-right my_t mb-2">邮箱:</div>
-            <div class="col-6 mb-4">
-                <input class="form-control col-form-label-sm" type="email" id="email" placeholder="请输入邮箱">
+            <div class="col-5 mb-4 px-0">
+                <input class="form-control col-form-label-sm" type="email" onblur="check_email()" onfocus="show_msg4()" id="email" placeholder="请输入邮箱">
             </div>
-            <div class="col-3 mb-4">
-                <span id="msg4"></span>
+            <div class="col-4 mb-4 px-0">
+                <span id="msg4" class="alert-danger"></span>
             </div>
             <div class="col-3 text-light text-right my_t mb-2">手机号:</div>
-            <div class="col-6 mb-4">
-                <input class="w-100 form-control col-form-label-sm" type="phone" id="upwd" placeholder="请输入手机号">
+            <div class="col-5 mb-4 px-0">
+                <input class="w-100 form-control col-form-label-sm" type="phone" id="phone" onblur="check_phone()" onfocus="show_msg5()" placeholder="请输入手机号">
             </div>
-            <div class="col-3 mb-4">
-                <span id="msg5"></span>
+            <div class="col-4 mb-4 px-0">
+                <span id="msg5" class="alert-danger"></span>
             </div>
-            <div class="col-6 offset-3 ">
-                <button class="w-100 btn btn-primary">提交注册信息</button>
+            <div class="col-5 offset-3 px-0">
+                <button class="w-100 btn btn-primary" onclick="userReg()">提交注册信息</button>
             </div>
         </div>
+    </div>
+    <div class="box2" id="footer">
+            <div>
+                <img src="./image/ewm.png" alt="">
+            </div>
+            <div>
+                <p>
+                    四川省成都市锦江区东大街紫东楼段35号明宇金融广场18楼1805号<br/>
+                    电话：028-66268475 <br/>
+                    E-mail: guanjincapital@163.com<br/>
+                    Copyright © 2018 guanjin观今投资版权所有&nbsp;蜀ICP备1700024号-1&nbsp;<a href="http://www.shangfox.com" target="_blank" title="四川做网站公司">四川尚狐网络&nbsp;<img src="./image/pic.gif" alt=""></a>
+                 </p>
+                <p>
+                    <select onchange="window.open(this.value);" style="height:30px;color:white;border:1px  white dashed;background:rgba(0,0,0,0)">  
+                        <option value="#">友情链接</option>  
+                        <option value="http://www.tengenhi.com/">德阳天元重工</option> 
+                        <option value="http://www.xtygq.com/">四川兴天元钢桥</option>  
+                        <option value="http://www.neeq.com.cn/">全国中小企业股份转让系统</option> 
+                        <option value="http://www.csrc.gov.cn/pub/newsite/">中国证券监督管理委员会</option> 
+                        <option value='http://www.amac.org.cn/'’>中国证券投资基金业协会</option>                     
+                    </select>
+                </p>
+            </div>
+            <div id="map"><img src="./image/map.png"/></div>
     </div>
 </body>
 </html>
