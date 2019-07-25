@@ -15,12 +15,12 @@ router.post("/v1/userReg",(req,res)=>{
     })
 })
 //创建用户注册路由; restful规则
-router.get("/v1/userlogin/:uname&upwd",(req,res)=>{
+router.get("/v1/userlogin/:uname&:upwd",(req,res)=>{
     //获取用户信息
     var $uname=req.params.uname;
     var $upwd=req.params.upwd;
     //执行sql语句
-    pool.query("select uname,upwd from guanjinx_user where uname=? and upwd=?",[$uname,$upwd],(err,result)=>{
+    pool.query("select uname,upwd from guanjin_user where uname=? and upwd=?",[$uname,$upwd],(err,result)=>{
         if(err)throw err;
         result.length>0 ? res.send("1") : res.send("0");
     })
