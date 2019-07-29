@@ -1,0 +1,44 @@
+.page-header{
+    width:100%;height:420px;
+    background-image:url(../image/about_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
+}
+.news{background-image:url(../image/222.jpg) !important}
+/* .page-header:first-child{width:100%;height: 100%;} */
+.small_box{
+    height:150px;width:20%;
+    position: absolute;
+    top:270px;left:7%;
+    background: rgba(255,170,0,0.8);
+}
+a hr{border:1px solid white}
+#content{background: #eeeeee;}
+.bg{background: #eeeeee;}
+a:hover{text-decoration: none !important;}
+.breadcrumb .breadcrumb-item .breadcrumb-link:hover{color:orange !important;}
+.nav-active.active{background: #bb0000 !important;color:white;}
+li>.nav-active:hover{background: #bb0000 !important;color:white;}
+.my-border{border-bottom:1px solid #e0e0e0}
+.media{color:#666;font-size:1rem;}
+/* .media a{transition:1s !important;} */
+.media p{font-size:.8rem;}
+.news_hover{transition: 0.5s}
+.news_hover:hover{background:orange;color:white !important;padding: 4.5rem !important;}
+.news_hover:hover a{color: white !important;}
+.work{background:url(../image/workbg.jpg) !important;}
+.bg_gray{background:#DDDD !important;padding:1.5rem 3rem}
+.bg_gray+.bg_gray{margin-left:0.8rem}
+.bg_gray.active{background:white !important;color:#b00 !important; }
+.artic{font-size:1rem;}
+.work2{background: url(../image/work2bg.jpeg) !important;}
+.work3{background:url(../image/work3bg.jpeg) !important;}
+.team{background:url(../image/teambg.jpg) !important;}
+.my_dashed{border-bottom:1px dashed #e0e0e0}
+.page-link{border-radius:0 !important;}
+.page-item.active .page-link{background:#e0e0e0 !important; border:1px solid #dee2e6 !important;}
+.team_hover{transition:2s !important}
+.team_hover:hover{border-bottom:1px solid red ;}
+.team_hover:hover img{border-radius:5rem 0 5rem 0 !important;}
+.team_hover:hover h5{color:black !important;}
