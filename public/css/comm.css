@@ -17,10 +17,11 @@ a hr{border:1px solid white}
 #content{background: #eeeeee;}
 .bg{background: #eeeeee;}
 a:hover{text-decoration: none !important;}
+.breadcrumb{padding-top:1rem;padding-left:0}
 .breadcrumb .breadcrumb-item .breadcrumb-link:hover{color:orange !important;}
 .nav-active.active{background: #bb0000 !important;color:white;}
 li>.nav-active:hover{background: #bb0000 !important;color:white;}
-.my-border{border-bottom:1px solid #e0e0e0}
+.my-border{border-bottom:3px solid #e0e0e0}
 .media{color:#666;font-size:1rem;}
 /* .media a{transition:1s !important;} */
 .media p{font-size:.8rem;}
@@ -42,3 +43,8 @@ li>.nav-active:hover{background: #bb0000 !important;color:white;}
 .team_hover:hover{border-bottom:1px solid red ;}
 .team_hover:hover img{border-radius:5rem 0 5rem 0 !important;}
 .team_hover:hover h5{color:black !important;}
+.person_nav li{width:10%;text-align: center;}
+.hr_ul li+li{margin-top:1rem;}
+.hr{background-image:url(../image/hrbg.jpg) !important}
+.group{background-image:url(../image/groupbg.jpg) !important}
+.contact{background-image:url(../image/contactbg.jpg) !important}
